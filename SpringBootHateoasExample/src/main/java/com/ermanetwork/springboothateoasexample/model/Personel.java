@@ -3,6 +3,7 @@ package com.ermanetwork.springboothateoasexample.model;
 import com.sun.istack.NotNull;
 import lombok.Getter;
 import lombok.Setter;
+import org.springframework.hateoas.RepresentationModel;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -13,7 +14,7 @@ import javax.validation.constraints.*;
 @Entity
 @Getter
 @Setter
-public class Personel {
+public class Personel extends RepresentationModel<Personel> {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

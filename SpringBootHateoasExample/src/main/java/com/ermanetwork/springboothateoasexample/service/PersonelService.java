@@ -6,6 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.validation.Valid;
+import java.util.ArrayList;
+import java.util.List;
 
 @Service
 public class PersonelService {
@@ -15,5 +17,11 @@ public class PersonelService {
 
     public void save(@Valid Personel personel){
         personelRepository.save(personel);
+    }
+
+    public List<Personel> getPersonelList(){
+        List<Personel> personelList = new ArrayList<>();
+        personelRepository.findAll().forEach(personel -> personelList.add(personel));
+        return personelList;
     }
 }
