@@ -2,10 +2,15 @@
 SpringBootHateoas
 
 Java 11
+
 Spring Data JPA
+
 Lombok
+
 Spring Hateoas
+
 Spring Validation
+
 H2 Database
 
 Spring Hateoas bir rest servisin tüm içerikleri görmemizi sağlayan bir araçtır.
